@@ -38,11 +38,12 @@ btn.addEventListener("click", function () {
     //    console.log(ranWords.join(''));
        msg.innerHTML=`Guess The Word ${ranWords}`;
   }else{
-    let tempWord = guess.value;
+    let tempWords=guess.value;
+    let tempWord = tempWords.toLowerCase();
     if(tempWord===newWords){
         console.log("correct")
         play= false;
-       msg.innerHTML=`Awesome It's Correct it is ${newWords}`;
+       msg.innerHTML=`Awesome It's Correct it is ${tempWords}`;
         btn.innerText="Start Again";
     guess.classList.toggle("hidden");
     guess.value="";
